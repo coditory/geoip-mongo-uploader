@@ -1,8 +1,10 @@
 package com.coditory.mongo.shared.net
 
 import spock.lang.Specification
+import spock.lang.Unroll
 
 class ComparableAddressSpec extends Specification {
+    @Unroll
     def "should create comparable address string from: #ip"() {
         given:
             InetAddress address = InetAddress.getByName(ip)
@@ -12,6 +14,8 @@ class ComparableAddressSpec extends Specification {
             comparableIp == expected
         where:
             ip                                        | expected
+            "5.133.248.238"                           | "0000000000000000000000000000000092666094"
+            "0:0:0:0:0:ffff:585:f8ee"                 | "0000000000000000000000000000000092666094"
             "127.0.0.1"                               | "0000000000000000000000000000002130706433"
             "127.0.0.2"                               | "0000000000000000000000000000002130706434"
             "127.0.0.126"                             | "0000000000000000000000000000002130706558"

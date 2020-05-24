@@ -1,6 +1,8 @@
-# Mongo Uploader
+# GeoIp Mongo Uploader
 
-Uploads GeuIp data to MongoDB.
+[![Build Status](https://travis-ci.org/coditory/geoip-mongo-uploader.svg?branch=master)](https://travis-ci.org/coditory/geoip-mongo-uploader)
+
+Uploads GeoIp data to MongoDB.
 
 GeoIp data can be fetched from [maxmind.com](https://www.maxmind.com/).
 It requires registering a free account.
@@ -17,7 +19,7 @@ java -jar geoip-mongo-uploader.jar \
     --mongo mongo://localhost:27017/testDb
     --dir ~/Desktop/geoip
 # Response:
-# Lot of logs informing abut the progress
+# Lot of logs informing about the progress
 
 # Print geoip location using MongoDB
 java -jar geoip-mongo-uploader.jar \
@@ -34,4 +36,7 @@ Using scripts:
 
 # Resolve address using MongoDB 
 ./resolve.sh mongodb://localhost/test 5.133.248.237
+
+# Resolve address using MongoDB 
+./resolve.sh mongodb://localhost/test 0:0:0:0:0:ffff:585:f8ed
 ```
