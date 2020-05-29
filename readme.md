@@ -1,6 +1,6 @@
 # GeoIp Mongo Uploader
 
-[![Build Status](https://travis-ci.org/coditory/geoip-mongo-uploader.svg?branch=master)](https://travis-ci.org/coditory/geoip-mongo-uploader)
+[![Build Status](https://travis-ci.com/coditory/geoip-mongo-uploader.svg?branch=master)](https://travis-ci.com/coditory/geoip-mongo-uploader)
 
 Uploads GeoIp data to MongoDB.
 
